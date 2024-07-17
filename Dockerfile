@@ -4,7 +4,7 @@
 #--------------------------------------------------------------------------
 #
 
-FROM php:8.2-cli
+FROM php:8.3-cli
 
 ARG SUPERVISOR_WORKERS=/var/www/html/workers/*.conf
 ENV SUPERVISOR_WORKERS ${SUPERVISOR_WORKERS}
@@ -34,6 +34,7 @@ RUN apt-get update \
     autoconf  \
     libc-dev \
     librdkafka-dev \
+    libbrotli-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # PHP extensions
