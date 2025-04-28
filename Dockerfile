@@ -1,4 +1,4 @@
-FROM ghcr.io/gobiz-vinasat/image-php:8.3.0-octane
+FROM ghcr.io/gobiz-vinasat/image-php:8.3.0-laravel12-octane
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
