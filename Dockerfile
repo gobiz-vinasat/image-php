@@ -49,7 +49,7 @@ RUN docker-php-ext-install -j$(nproc) \
   && pecl install swoole && docker-php-ext-enable swoole \
   && pecl install rdkafka && docker-php-ext-enable rdkafka \
   && pecl install redis && docker-php-ext-enable redis \
-  && pecl install mongodb && docker-php-ext-enable mongodb
+  && pecl install mongodb-1.21.0 && docker-php-ext-enable mongodb
 
 # Composer
 RUN curl -s https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
